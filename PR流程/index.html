@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://wen-wen-555.github.io/my-docs/PR%E6%B5%81%E7%A8%8B/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>PR流程 - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "PR\u6d41\u7a0b";
+        var mkdocs_page_input_path = "PR\u6d41\u7a0b.md";
+        var mkdocs_page_url = "/my-docs/PR%E6%B5%81%E7%A8%8B/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">首页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../basics/tutorial/">基础概念</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../guides/%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BA%A4%E7%94%B5%E8%B4%B9/">实操指南</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">教程</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">PR流程</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pr">什么是PR?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1">完整流程（网页版）</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">第一步：找到目标项目</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fork">第二步：Fork项目</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">第三步：编辑文件</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">第四步：修改并提交</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pull-request">第五步：发起Pull Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">第六步：等待反馈</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">注意事项</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">总结</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">教程</li>
+      <li class="breadcrumb-item active">PR流程</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="githubpr">GitHub开源贡献入门：如何给别人的项目提交PR</h1>
+<blockquote>
+<p>本文是一篇手把手教你如何在GitHub上给别人的开源项目提交修改（Pull Request）。</p>
+</blockquote>
+<h2 id="pr">什么是PR?</h2>
+<p>PR全称<strong>Pull Request</strong> ，中文叫“合并请求”。</p>
+<p>当你想给别人的开源项目贡献代码或修改文档时，你不能直接修改别人的仓库。正确做法如下：</p>
+<p>1.先把项目“复制”一份到自己的GitHub账号下（这个过程叫<strong>Fork</strong>）</p>
+<p>2.在自己的副本里做修改</p>
+<p>3.向原作者发一份“申请”，请他把你的修改合并到原项目中</p>
+<p>这份“申请”就是<strong>PR</strong>。</p>
+<h2 id="_1">完整流程（网页版）</h2>
+<h3 id="_2">第一步：找到目标项目</h3>
+<p>在GitHub上找到你想贡献的项目。例如本教程以<code>bddbnet/gin_readme_zh</code>为例。</p>
+<h3 id="fork">第二步：Fork项目</h3>
+<p>进入项目页面后，点击右上角的Fork按钮。</p>
+<p>GitHub会自动将这个项目“复印”一份到你自己的账号下。</p>
+<blockquote>
+<p>Fork之后，你拥有这个副本的完全编辑权限，可以随意修改，不会影响原项目。</p>
+</blockquote>
+<h3 id="_3">第三步：编辑文件</h3>
+<p>进入你Fork后的仓库，找到你想修改的文件（例如：README.md），点击文件右上角的<strong>铅笔图标</strong>（Edit this file），进入在线编辑模式。</p>
+<p><img alt="001" src="D:\12.技术文档\3.图片\PR修改图片\001.png" /></p>
+<h3 id="_4">第四步：修改并提交</h3>
+<p>在编辑器中完成你的修改后，滚动到页面底部：</p>
+<ul>
+<li>
+<p>在<strong>Commit message</strong> 栏写一句简短的修改说明，例如：Add Go Modu les setup guide</p>
+</li>
+<li>
+<p>点击绿色的<strong>Commit changes</strong>按钮</p>
+</li>
+</ul>
+<p>此时，你的修改已经保存到了你自己Fork仓库中。</p>
+<p><img alt="003" src="D:\12.技术文档\3.图片\PR修改图片\003.png" /></p>
+<h3 id="pull-request">第五步：发起Pull Request</h3>
+<p>提交修改后，页面会自动跳转到一个对比页面（Comparing changes），显示你的修改和原项目的差异。</p>
+<p>确认信息无误后，点击绿色的<strong>Create pull request</strong>按钮。</p>
+<p>接下来会进入PR填写页面：</p>
+<ul>
+<li><strong>标题（Title）</strong>：自动填好了你的Commit message，可以保留或修改</li>
+<li><strong>描述（Description）</strong>：补充说明你具体改了什么，为什么这么改</li>
+<li>点击右下角的<strong>Create pull request</strong>按钮，正式提交</li>
+</ul>
+<h3 id="_5">第六步：等待反馈</h3>
+<p>PR提交成功后，原作者会收到通知。他可能会：</p>
+<ul>
+<li><strong>直接合并（Merge）</strong>:接受你的修改，你的贡献正式上线</li>
+<li><strong>提出修改意见</strong>：在PR下方留言，请你调整某此内容</li>
+<li><strong>关闭（Close）</strong>：不接受这次修改</li>
+</ul>
+<blockquote>
+<p>即使被拒绝也不用气馁，这本身就是很好的一次学习。</p>
+</blockquote>
+<h2 id="_6">注意事项</h2>
+<ul>
+<li>PR提交后<strong>不会影响原作者的项目</strong>，只有原作者同意合并后才会生效</li>
+<li>修改说明（Commit message）尽量写清楚，方便原作者快速理解你的意图</li>
+<li>如果是较大的修改，建议先在项目的lssues中和作者沟通，确认方向后再动手 </li>
+<li>网页版编辑适合简单的文档修改；如果是代码级别的改动，建议用本地Git操作（clone$$\longrightarrow$$修改$$\longrightarrow$$commit$$\longrightarrow$$push）</li>
+</ul>
+<h2 id="_7">总结</h2>
+<p>整个PR流程可以概括为以下五步：</p>
+<blockquote>
+<p>Fork &gt; 编辑 &gt; Commit &gt; 发起PR &gt; 等待反馈</p>
+</blockquote>
+<p>这就是GitHub开源协作最基本的方式。无论是修改文档、修复Bug还是添加新功能，任何开源项目都是通过PR来接受外部贡献的。</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../guides/%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BA%A4%E7%94%B5%E8%B4%B9/" class="btn btn-neutral float-left" title="实操指南"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../guides/%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BA%A4%E7%94%B5%E8%B4%B9/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
