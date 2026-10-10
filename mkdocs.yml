@@ -1,0 +1,9 @@
+﻿site_name: My Docs
+theme:
+  name: readthedocs
+nav:
+  - 首页: index.md
+  - 基础概念: basics/tutorial.md
+  - 实操指南: guides/支付宝交电费.md
+  - 教程:
+    - PR流程: PR流程.md
